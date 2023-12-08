@@ -1,0 +1,10 @@
+version: "3"
+services:
+  modbusslave:
+    image: snoophogg/modbusslave
+    ports: 
+      - 502:502
+    command: -a 1
+  modpoll:
+    build: .
+    command: modbusslave
